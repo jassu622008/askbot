@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transformers Text Generation</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Transformers Text Generation</h1>
+      <form method="POST" action="/">
+        <div class="form-group">
+          <label for="prompt">Prompt:</label>
+          <textarea class="form-control" id="prompt" name="prompt" rows="3" placeholder="Enter your prompt here..."></textarea>
+        </div>
+        <div class="form-group">
+          <label for="model_type">Model Type:</label>
+          <select class="form-control" id="model_type" name="model_type">
+            <option value="gpt2">GPT-2</option>
+            <option value="distilgpt2">DistilGPT-2</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="num_words">Number of Words:</label>
+          <input type="number" class="form-control" id="num_words" name="num_words" min="1" max="1000" value="100">
+        </div>
+        <button type="submit" class="btn btn-primary">Generate Text</button>
+      </form>
+    </div>
+  </body>
+</html>

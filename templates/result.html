@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transformers Text Generation - Results</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Transformers Text Generation</h1>
+      <div class="progress">
+        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="{{ progress }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ progress }}%;">
+          {{ progress }}%
+        </div>
+      </div>
+      <br>
+      <p>{{ text }}</p>
+      <a href="{{ url_for('home') }}">Back to Home</a>
+    </div>
+  </body>
+</html>
